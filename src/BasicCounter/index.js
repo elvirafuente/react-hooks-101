@@ -17,16 +17,23 @@ const BasicCounter = () => {
 
     const [ counter, setCounter ] = useState(0);
 
+    ////////////////////////////////////if else
+    // const handleClick = (event) => {
+    //     const {id} = event.target;
+    //     if( id === "add"){
+    //         setCounter(counter + 1)
+    //     } else {
+    //         setCounter(counter - 1)
+    //     }
+    // }
+    
+    ///////////////////////////////////////////conditional ternary
     const handleClick = (event) => {
         const {id} = event.target;
-        if( id === "add"){
-            setCounter(counter + 1)
-        } else {
-            setCounter(counter - 1)
-
-        }
+        id === "add" ? setCounter(counter + 1) : setCounter(counter - 1) ;
     }
-       
+
+
     return ( 
         <div>
             <h2 className="title">Welcome to the counter of life</h2>
